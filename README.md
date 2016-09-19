@@ -1,4 +1,6 @@
 # verge.website
 
-https://verge-web-development.github.io./verge.website/
-https://verge.website/
+
+http://verge-web-development.github.io./verge.website/
+
+http://verge.website/
