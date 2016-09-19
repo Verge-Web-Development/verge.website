@@ -1,0 +1,127 @@
+.tilesGroup * {
+	transition: all 0.5s ease-in-out;
+}
+.tilesGroup {
+	visibility: hidden;
+	text-align: center;
+	margin: 64px auto 64px auto;
+	perspective: 1500px;
+}
+.tileWrap {
+	margin: 4px;
+	width: 350px;
+	height: 350px;
+	cursor: pointer;
+	border-radius: 1px;
+	display: inline-block;
+}
+.tile {
+	width: 350px;
+	height: 350px;
+	color: #FFF;
+	border-radius: 1px;
+	animation: tip 1.8s;
+	animation-delay: 4.5s;
+	transform-style: preserve-3d;
+}
+.tile a {
+	color: #FFF;
+}
+/*
+	front
+*/
+.front {
+	width: 350px;
+	height: 350px;
+	z-index: 2;
+	display: table;
+	table-layout: fixed;
+	position: absolute;
+	border-radius: 1px;
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
+
+	backface-visibility: hidden;
+	transform: rotateY(0deg);
+}
+.front * {
+	display: table-cell;
+	vertical-align: middle;
+}
+.front > span {
+	padding: 16px;
+}
+.front > span > h3, .front > span > h4 {
+	color: #fff;
+	margin: auto;
+	display: block;
+}
+/*
+	back
+*/
+.back {
+	width: 350px;
+	height: 350px;
+	display: table;
+	table-layout: fixed;
+	position: absolute;
+	border-radius: 1px;
+	background-color: #333841;
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
+
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+}
+.back * {
+	display: table-cell;
+	vertical-align: middle;
+}
+.back > span {
+	padding: 16px;
+}
+.back > span > p {
+	color: #fff;
+}
+.back > span > h3, .back > span > h4, .back> span > a {
+	color: #fff;
+	margin: auto;
+	display: block;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+.back > span > a:hover {
+	color: #43C3B1;
+}
+/*
+	active
+*/
+.activeTile {
+	transform: rotateY(180deg);
+}
+/*
+	mobile
+*/
+@media screen and (max-width: 730px){
+	.tileWrap {
+		height: 250px;
+		width: 250px;
+	}
+	.tile {
+		height: 250px;
+		width: 250px;
+	}
+	.front {
+		height: 250px;
+		width: 250px;
+	}
+	.back {
+		height: 250px;
+		width: 250px;
+	}
+}
+/*
+	keyframes
+*/
+@keyframes tip {
+	50% { transform: rotateY(180deg); }
+	100% { transform: rotateY(0deg); }
+}

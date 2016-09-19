@@ -1,0 +1,92 @@
+.blurWrap {
+      width: 100%;
+	height: 100%;
+	will-change: filter;
+	transition: all 0.5s ease 0.5s;-webkit-transition: all 0.5s ease 0.5s;-moz-transition: all 0.5s ease 0.5s;-ms-transition: all 0.5s ease 0.5s;-o-transition: all 0.5s ease 0.5s;
+}
+.blur {
+      filter: blur(15px); -webkit-filter: blur(15px); -moz-filter: blur(15px); -ms-filter: blur(15px);
+}
+.active {
+      transform: translate3d(0%, 0%, 0px) !important;-webkit-transform: translate3d(0%, 0%, 0px) !important;-moz-transform: translate3d(100%, 0%, 0px);-ms-transform: translate3d(100%, 0%, 0px) -o-transform: translate3d(100%, 0%, 0px);
+}
+.active #menuIcon {
+	right: 10px;
+}
+#menu {
+      z-index:100;
+	width: 100%;
+      height: 100%;
+      position: fixed;
+	will-change: transform;
+	transform: translate3d(-100%, 0%, 0px);-webkit-transform: translate3d(-100%, 0%, 0px);-moz-transform: translate3d(-100%, 0%, 0px);-ms-transform: translate3d(-100%, 0%, 0px) -o-transform: translate3d(-100%, 0%, 0px);
+      transition: all 0.5s ease;-webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;-o-transition: all 0.5s ease;
+}
+#menuIcon {
+	top: 15px;
+	right: -50px;
+      pointer-events: all;
+	position: absolute;
+}
+.list {
+	width: 100%;
+	height: 100%;
+}
+.list > div {
+      text-align: center;
+      vertical-align: middle;
+	font-family: 'Syncopate';
+      text-transform: uppercase;
+	background-color: rgba(51,56,64,0.8);
+	transition: all 0.5s ease; -webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;-o-transition: all 0.5s ease;
+}
+.list > div > a {
+      padding:32px;
+      font-size: 200%;
+      font-weight: 900;
+      color: #FFF;
+      display: block;
+}
+.list > div > a:hover {
+      color: #C36159;
+}
+#media {
+      width: 100%;
+      bottom: 0px;
+      padding: 0px;
+      height: 58px;
+      position: absolute;
+      text-align: center;
+	transition: all 0.5s ease;-webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;-o-transition: all 0.5s ease;
+}
+#media a {
+	margin: 0 4px;
+      vertical-align: bottom;
+      display: inline-block;
+}
+#media a:hover {
+      filter: contrast(3);-webkit-filter: contrast(3);-moz-filter: contrast(3);-ms-filter: contrast(3);-o-filter: contrast(3);
+}
+#media a object {
+      pointer-events: none;
+}
+.list > div > hr {
+      border: solid 1px rgba(255,255,255,0.5);
+      width: 60%;
+}
+
+/*
+	Mobile
+*/
+@media screen and (max-width: 600px) {
+      .list > div > a {
+            font-size: 24px;
+		padding: 16px;
+      }
+}
+@media screen and (max-width: 360px), screen and (max-height: 441px) {
+      .list > div > a {
+            font-size: 20px;
+		padding: 4px;
+      }
+}

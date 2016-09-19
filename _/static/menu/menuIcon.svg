@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 100 100" cursor="pointer">
+<style>.fill {fill:#333840;}</style>
+<path id="menuIconTop" d="M-.016 9.945h100v13.622h-100z" class="fill"/>
+<path id="menuIconMiddle" d="M-.016 44.19h100v13.62h-100z" class="fill"/>
+<path id="menuIconBottom" d="M-.016 77.433h100v13.622h-100z" class="fill"/>
+</svg>
